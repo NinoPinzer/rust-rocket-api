@@ -1,19 +1,18 @@
-
 mod config;
 mod middelware;
 mod routes;
 mod repositories;
 mod services;
 mod models;
-mod controller;
+mod controllers;
+pub mod schema;
 
-#[macro_use] extern crate rocket;
-
+use rocket::launch;
 
 #[launch]
 fn rocket() -> _ {
     rocket::build()
-    .attach(config::logger::init())
+    .attach(config::database::UsersDbConn::fairing())
     .mount("/", routes::get_routes())
     //.register("/", catchers![not_found])
 }
