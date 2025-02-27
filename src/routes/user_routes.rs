@@ -1,6 +1,9 @@
-use rocket::Route;
-use crate::controller::user_controller;
+use rocket::{routes, Route};
+use crate::controllers::user_controller::{get_users, create_user};
 
 pub fn get_user_routes() -> Vec<Route> {
-    routes![user_controller::get_users, user_controller::create_user]
+    routes![
+        get_users,
+        create_user
+    ]
 }

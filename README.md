@@ -8,14 +8,13 @@ A structured API template in **Rust** with **Rocket.rs**, utilizing a modular ar
 rust-rocket-api/
 │── src/
 │   ├── config/           # Configuration files (Logger, etc.)
-│   │   ├── logger.rs
+│   │   ├── database.rs
 │   │   ├── mod.rs
 │   ├── controller/       # Controllers for API endpoints
 │   │   ├── mod.rs
 │   │   ├── user_controller.rs
 │   ├── middleware/       # Middleware (e.g., Logging)
 │   │   ├── mod.rs
-│   │   ├── request_logger.rs
 │   ├── models/           # Data models
 │   │   ├── mod.rs
 │   │   ├── user.rs
@@ -28,7 +27,9 @@ rust-rocket-api/
 │   ├── services/         # Business logic
 │   │   ├── mod.rs
 │   │   ├── user_service.rs
+│   ├── lib.rs            # Database connection
 │   ├── main.rs           # Application entry point
+│   ├── schema.rs         # Diesel created Schema
 │── Cargo.toml            # Rust project file
 │── .gitignore            # Files to be ignored
 ```
@@ -69,7 +70,6 @@ The API will now be running at `http://127.0.0.1:8000`.
 Configuration can be adjusted using a `.env` file:
 
 ```
-RUST_LOG=info
 DATABASE_URL=postgres://user:password@localhost/db_name
 ```
 
