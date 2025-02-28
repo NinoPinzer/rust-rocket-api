@@ -59,11 +59,12 @@ The API will now be running at `http://127.0.0.1:8000`.
 
 ## 📡 API Endpoints
 
-| Method | Route    | Description       |
-| ------ | -------- | ----------------- |
-| GET    | `/`      | Homepage          |
-| GET    | `/users` | List all users    |
-| POST   | `/users` | Create a new user |
+| Method | Route         | Description       |
+| ------ | ------------- | ----------------- |
+| GET    | `/users`      | List all users    |
+| POST   | `/users`      | Create a new user |
+| Update | `/users/<id>` | Create a new user |
+| Delete | `/users/<id>` | Create a new user |
 
 ## 🛠 Configuration
 
