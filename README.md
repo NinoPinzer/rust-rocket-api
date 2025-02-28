@@ -12,24 +12,19 @@ rust-rocket-api/
 │   │   ├── mod.rs
 │   ├── controller/       # Controllers for API endpoints
 │   │   ├── mod.rs
-│   │   ├── user_controller.rs
+│   │   ├── message_controller.rs
 │   ├── middleware/       # Middleware (e.g., Logging)
 │   │   ├── mod.rs
 │   ├── models/           # Data models
 │   │   ├── mod.rs
-│   │   ├── user.rs
-│   ├── repositories/     # Database interactions
-│   │   ├── mod.rs
-│   │   ├── user_repositories.rs
+│   │   ├── message.rs
 │   ├── routes/           # API routes
 │   │   ├── mod.rs
-│   │   ├── user_routes.rs
+│   │   ├── message_route.rs
 │   ├── services/         # Business logic
 │   │   ├── mod.rs
-│   │   ├── user_service.rs
-│   ├── lib.rs            # Database connection
+│   │   ├── message_service.rs
 │   ├── main.rs           # Application entry point
-│   ├── schema.rs         # Diesel created Schema
 │── Cargo.toml            # Rust project file
 │── .gitignore            # Files to be ignored
 ```
@@ -61,10 +56,9 @@ The API will now be running at `http://127.0.0.1:8000`.
 
 | Method | Route         | Description       |
 | ------ | ------------- | ----------------- |
-| GET    | `/users`      | List all users    |
-| POST   | `/users`      | Create a new user |
-| Update | `/users/<id>` | Update a user     |
-| Delete | `/users/<id>` | Delete a user     |
+| POST   | `/message`    | Endpoint for      |
+|        |               | Chirpstack        |
+
 
 ## 🛠 Configuration
 
