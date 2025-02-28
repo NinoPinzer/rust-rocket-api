@@ -1,10 +1,10 @@
 use rocket::Route;
 
-mod user_routes;
+mod message_route;
 
 pub fn get_routes() -> Vec<Route> {
     let mut routes = Vec::new();
-    routes.extend(user_routes::get_user_routes());
+    routes.extend(message_route::message_routes());
     
     routes
 }
