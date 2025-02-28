@@ -5,6 +5,7 @@ mod repositories;
 mod services;
 mod models;
 mod controllers;
+
 pub mod schema;
 
 use rocket::launch;
