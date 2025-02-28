@@ -1,5 +1,5 @@
 use serde::{Serialize, Deserialize};
-use diesel::{Insertable, Queryable};
+use diesel::{prelude::AsChangeset, Insertable, Queryable};
 use crate::schema::users;
 
 
@@ -10,7 +10,7 @@ pub struct User {
     pub name: String,
     pub email: String,
 }
-#[derive(Insertable, Deserialize)]
+#[derive(Insertable, AsChangeset, Deserialize)]
 #[diesel(table_name = users)]
 pub struct InsertableUser {
     name: String,
