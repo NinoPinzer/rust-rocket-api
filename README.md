@@ -63,8 +63,8 @@ The API will now be running at `http://127.0.0.1:8000`.
 | ------ | ------------- | ----------------- |
 | GET    | `/users`      | List all users    |
 | POST   | `/users`      | Create a new user |
-| Update | `/users/<id>` | Create a new user |
-| Delete | `/users/<id>` | Create a new user |
+| Update | `/users/<id>` | Update a user     |
+| Delete | `/users/<id>` | Delete a user     |
 
 ## 🛠 Configuration
 
