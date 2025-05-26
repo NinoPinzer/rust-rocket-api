@@ -1,2 +1,5 @@
 [default.databases]
 users_db = { url = "postgres://postgres:postgres@localhost/user"}
+# Optional pool settings:
+# pool_size = 20  # Default is number of Rocket workers * 4
+# timeout = 5     # Default is 5 seconds (max time to wait for a connection)
